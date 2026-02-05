@@ -50,5 +50,43 @@ generateBtn.addEventListener('click', () => {
     }, 600);
 });
 
+// Formspree AJAX submission
+const form = document.getElementById("comment-form");
+const status = document.getElementById("form-status");
+
+if (form) {
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        
+        try {
+            const response = await fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                status.innerHTML = "감사합니다! 댓글이 전달되었습니다.";
+                status.style.color = "#10b981";
+                form.reset();
+            } else {
+                const result = await response.json();
+                if (Object.hasOwn(result, 'errors')) {
+                    status.innerHTML = result.errors.map(error => error.message).join(", ");
+                } else {
+                    status.innerHTML = "오류가 발생했습니다. 잠시 후 다시 시도해주세요.";
+                }
+                status.style.color = "#ef4444";
+            }
+        } catch (error) {
+            status.innerHTML = "네트워크 오류가 발생했습니다.";
+            status.style.color = "#ef4444";
+        }
+    });
+}
+
 // Initial generation
 // displayNumbers(); // Keep it blank at first as per design

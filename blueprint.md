@@ -8,20 +8,20 @@ A high-end, visually stunning web application that generates 6 unique Lotto numb
 *   **Visual Polish:** Lotto balls are color-coded based on standard ranges (Yellow, Blue, Red, Gray, Green).
 *   **Staggered Animations:** Numbers appear with a smooth, timed sequence for a high-quality feel.
 *   **Responsive Design:** Works beautifully on both desktop and mobile devices.
-*   **Interactive UI:** Modern buttons with hover effects and tactile feedback.
+*   **Comment System:** Integrated with Formspree to collect user feedback/comments without a backend.
 
 ## Technical Details
-*   **CSS:** Utilizes CSS variables, flexbox/grid, and `@keyframes` for animations.
+*   **CSS:** Utilizes CSS variables, flexbox/grid, and @keyframes for animations.
 *   **JavaScript:** Pure ES6+ logic for unique number generation and DOM manipulation.
-*   **Baseline Standards:** Compatible with modern browsers using standard web technologies.
+*   **Formspree:** Used for handling form submissions.
 
 ## Implemented
 *   **HTML Structure:** Basic container for the app.
 *   **Styling:** Modern background and container styling.
 *   **Logic:** Generating 6 unique sorted numbers.
+*   **Comments:** Added Formspree contact form.
 
 ## Current Plan (Task)
-1.  Redesign the UI with a "Premium" aesthetic (Dark mode/Glassmorphism).
-2.  Implement color-coded Lotto balls.
-3.  Add entrance animations for the balls.
-4.  Deploy the application via `git push`.
+1.  Add a comment/feedback section using Formspree in `index.html`.
+2.  Style the form to match the premium dark mode aesthetic in `style.css`.
+3.  Deploy the changes via `git push`.
