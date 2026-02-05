@@ -205,7 +205,7 @@ header p {
 }
 
 /* Comment Section */
-.comment-section {
+.comment-section, .disqus-section {
     margin-top: 3rem;
 }
 
