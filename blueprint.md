@@ -2,16 +2,21 @@
 
 ## Overview
 
-A simple web application to generate random lottery numbers.
+A simple web application to generate a random lottery number.
 
 ## Features
 
-*   Generate 6 unique random numbers between 1 and 45.
-*   Display the generated numbers to the user.
+*   Generate a random number between 1 and 45.
+*   Display the generated number to the user.
 *   A button to trigger the number generation.
 
-## Current Plan
+## Implemented
 
-1.  **HTML:** Create the basic structure with a title, a button, and a container for the numbers.
-2.  **CSS:** Style the elements to be visually appealing.
-3.  **JavaScript:** Implement the logic to generate and display the lottery numbers.
+*   **HTML:** Created the basic structure with a title, a button, and a container for the number.
+*   **CSS:** Styled the elements to be visually appealing.
+*   **JavaScript:** Implemented the logic to generate and display a single random number when the button is clicked.
+
+## Next Steps
+
+*   Generate 6 unique random numbers instead of a single number.
+*   Add styling to the generated numbers.
