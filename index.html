@@ -34,42 +34,23 @@
             </svg>
         </button>
 
-        <section class="comment-section">
-            <div class="divider"></div>
-            <h3>피드백 보내기</h3>
-            <form action="https://formspree.io/f/mreazkgj" method="POST" id="comment-form">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="이름" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="응원 메시지나 의견을 남겨주세요" required></textarea>
-                </div>
-                <button type="submit" class="secondary-btn">보내기</button>
-            </form>
-            <div id="form-status"></div>
-        </section>
-
         <section class="disqus-section">
             <div class="divider"></div>
+            <h3>커뮤니티</h3>
             <div id="disqus_thread"></div>
         </section>
     </main>
 
     <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        */
-        /*
         var disqus_config = function () {
-        this.page.url = window.location.href;  
-        this.page.identifier = window.location.pathname; 
+            this.page.url = window.location.href;  
+            this.page.identifier = 'premium-lotto-generator'; 
         };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://test-test-17.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+        (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://test-test-17.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
