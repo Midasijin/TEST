@@ -1,17 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Premium Lotto Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Lotto Number Generator</h1>
-        <button id="generate">Generate Numbers</button>
-        <div id="numbers" class="numbers-container"></div>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
+    
+    <main class="container">
+        <header>
+            <h1>Lotto Numbers</h1>
+            <p>오늘의 행운을 확인해보세요</p>
+        </header>
+        
+        <div id="numbers-display" class="numbers-wrapper">
+            <!-- Numbers will be injected here -->
+            <div class="placeholder-text">버튼을 눌러 번호를 생성하세요</div>
+        </div>
+
+        <button id="generate-btn" class="primary-btn">
+            <span>번호 생성하기</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V20M20 12L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </main>
+
     <script src="main.js"></script>
 </body>
 </html>
