@@ -4,12 +4,21 @@
     --primary-color: #6366f1;
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
     
-    --lotto-1: #fbbf24; /* 1-10 */
-    --lotto-2: #3b82f6; /* 11-20 */
-    --lotto-3: #ef4444; /* 21-30 */
-    --lotto-4: #6b7280; /* 31-40 */
-    --lotto-5: #10b981; /* 41-45 */
+    --lotto-1: #fbbf24;
+    --lotto-2: #3b82f6;
+    --lotto-3: #ef4444;
+    --lotto-4: #6b7280;
+    --lotto-5: #10b981;
+}
+
+[data-theme="light"] {
+    --bg-color: #f1f5f9;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -17,6 +26,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Pretendard', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body {
@@ -32,6 +42,39 @@ body {
     position: relative;
     padding: 2rem 0;
 }
+
+/* Theme Toggle */
+.theme-toggle-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.theme-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.theme-btn:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.sun-icon { display: none; }
+.moon-icon { display: block; }
+
+[data-theme="light"] .sun-icon { display: block; }
+[data-theme="light"] .moon-icon { display: none; }
+[data-theme="light"] .blob { opacity: 0.15; }
 
 /* Background Animations */
 .background-blobs {
